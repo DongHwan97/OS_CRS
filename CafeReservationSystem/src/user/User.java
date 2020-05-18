@@ -5,7 +5,6 @@ public class User {
 	private String userPW;
 	private String Name;
 	private String Birth;
-	private boolean Blacklist;
 	
 	public String getUserID() {
 		return userID;
@@ -30,11 +29,5 @@ public class User {
 	}
 	public void setBirth(String birth) {
 		Birth = birth;
-	}
-	public boolean isBlacklist() {
-		return Blacklist;
-	}
-	public void setBlacklist(boolean blacklist) {
-		Blacklist = blacklist;
 	}
 }
