@@ -3,8 +3,8 @@ package user;
 public class User {
 	private String userID;
 	private String userPW;
-	private String Name;
-	private String Birth;
+	private String userName;
+	private String userBirth;
 	
 	public String getUserID() {
 		return userID;
@@ -18,16 +18,16 @@ public class User {
 	public void setUserPW(String userPW) {
 		this.userPW = userPW;
 	}
-	public String getName() {
-		return Name;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		Name = name;
+	public void setUserName(String username) {
+		userName = username;
 	}
-	public String getBirth() {
-		return Birth;
+	public String getUserBirth() {
+		return userBirth;
 	}
-	public void setBirth(String birth) {
-		Birth = birth;
+	public void setUserBirth(String userbirth) {
+		userBirth = userbirth;
 	}
 }

@@ -42,4 +42,19 @@ public class UserDAO {
 		}
 		return -2;
 	}
+	
+	public int join(User user) {
+		String SQL="INSERT INTO USER VALUES (?,?,?,?)";
+		try {
+			pstmt=conn.prepareStatement(SQL);
+			pstmt.setString(1,user.getUserName());
+			pstmt.setString(2,user.getUserID());
+			pstmt.setString(3,user.getUserPW());
+			pstmt.setString(4,user.getUserBirth());
+			return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }
