@@ -28,8 +28,8 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href=main.jsp>메인</a></li>
-				<li><a href=board.jsp>게시판</a></li>
+				<li><a href=main.jsp>메인</a></li>
+				<li class="active"><a href=board.jsp>게시판</a></li>
 			</ul>
 			<%
 				if (userID == null) {
@@ -60,29 +60,27 @@
 		</div>
 	</nav>
 	<div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="images/1.JPG">
-				</div>
-				<div class="item">
-					<img src="images/2.JPG">
-				</div>
-				<div class="item">
-					<img src="images/3.JPG">
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
+		<div class="row">
+			<table class="table table-striped"
+				style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th style="background-color: #eeeeee; text-align: center;">번호</th>
+						<th style="background-color: #eeeeee; text-align: center;">제목</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성자</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				</tr>
+				</tbody>
+			</table>
+			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
