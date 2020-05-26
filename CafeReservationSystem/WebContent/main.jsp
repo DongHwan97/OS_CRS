@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>다온 카페</title>
 </head>
+<link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
 <body>
 	<%
 		String userID = null;
@@ -19,17 +20,18 @@
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="main.jsp">다온 CAFE</a>
+				aria-expanded="false"></button>
+			<a class="navbar-brand" href="main.jsp"></a> <img
+				src="images/logo.png" align="left" width="50px" height="50px">
 		</div>
 		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
+			id="bs-example-navbar-collapse-1"">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href=main.jsp>메인</a></li>
+				<li><a href=board.jsp>카페소개</a></li>
+				<li><a href=board.jsp>메뉴</a></li>
 				<li><a href=board.jsp>게시판</a></li>
+				<li><a href=board.jsp>매장안내</a></li>
 			</ul>
 			<%
 				if (userID == null) {
@@ -78,14 +80,15 @@
 				</div>
 			</div>
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="right carousel-control" href="#myCarousel"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right"></span>
 			</a>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
