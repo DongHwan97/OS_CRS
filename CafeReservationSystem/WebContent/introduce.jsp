@@ -23,10 +23,11 @@
 			<img src="images/logo.png" align="left" width="50px" height="50px">
 			<a class="navbar-brand" href="main.jsp">  다온 CAFE  </a> 
 		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"">
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1"">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href=main.jsp>메인</a></li>
-				<li><a href=introduce.jsp>카페소개</a></li>
+				<li><a href=main.jsp>메인</a></li>
+				<li class="active"><a href=introduce.jsp>카페소개</a></li>
 				<li><a href=menu.jsp>메뉴</a></li>
 				<li><a href=board.jsp>게시판</a></li>
 				<li><a href=guide.jsp>매장안내</a></li>
@@ -59,31 +60,10 @@
 			%>
 		</div>
 	</nav>
-	<div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="images/1.JPG">
-				</div>
-				<div class="item">
-					<img src="images/2.JPG">
-				</div>
-				<div class="item">
-					<img src="images/3.JPG">
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			</a> <a class="right carousel-control" href="#myCarousel"
-				data-slide="next"> <span
-				class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-		</div>
+	<div>
+		<p align="center">다온카페는 커피 및 음료 전문점으로</p>
+		<p align="center">TAKE OUT방식을 추구하며 장소를 불문하고 편안하게 드실수 있는</p>
+		<p align="center">다양한 음료와 100% 아라비카 원두의 진한 커피를 맛 보실수 있는 커피 전문점입니다.</p>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/bootstrap.js"></script>
