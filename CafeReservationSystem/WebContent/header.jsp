@@ -1,35 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="java.io.PrintWriter" %>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width" , initial-scale="1">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/crs.css">
-<title>다온 카페</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<%
+<%
 		String userID = null;
+	
 	if (session.getAttribute("userID") != null) {
 		userID = (String) session.getAttribute("userID");
 	}
 	%>
+	
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-			</button>
-			<a class="navbar-brand" href="main.jsp">다온 CAFE</a>
+				aria-expanded="false"></button>
+			<img src="images/logo.png" align="left" width="50px" height="50px">
+			<a class="navbar-brand" href="main.jsp"> 다온 CAFE </a>
 		</div>
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href=main.jsp>메인</a></li>
-				<li class="active"><a href=board.jsp>게시판</a></li>
+				<li class="active"><a href=main.jsp>메인</a></li>
+				<li><a href=introduce.jsp>카페소개</a></li>
+				<li><a href=menu.jsp>메뉴</a></li>
+				<li><a href=board.jsp>게시판</a></li>
+				<li><a href=guide.jsp>오시는 길</a></li>
 			</ul>
 			<%
 				if (userID == null) {
@@ -59,33 +60,5 @@
 			%>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row">
-			<form method="post" action="writeAction.jsp">
-				<table class="table table-striped"
-					style="text-align: center; border: 1px solid #dddddd">
-					<thead>
-						<tr>
-							<th colspan="2"
-								style="background-color: #eeeeee; text-align: center;">글쓰기</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><input type="text" class="form-control"
-								placeholder="글 제목" name="boardTitle" maxlength="50"></td>
-						</tr>
-						<tr>
-							<td><textarea class="form-control" placeholder="글 내용"
-									name="boardContent" maxlength="2048" style="height: 350px;"></textarea></td>
-						</tr>
-					</tbody>
-				</table>
-				<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
-			</form>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="js/bootstrap.js"></script>
 </body>
 </html>
