@@ -51,13 +51,13 @@
 		</tr>
 		<tr>
 			<td width="250">
-				<div align="center"><h3>아메리카노</h3></div>
+				<div align="center"><h4>아메리카노</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>딸기에이드</h3></div>
+				<div align="center"><h4>딸기에이드</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>케이크</h3></div>
+				<div align="center"><h4>케이크</h4></div>
 			</td>
 		</tr>
 		<table width="1250" border="0" align="center" cellpadding="0"
@@ -81,13 +81,13 @@
 		</tr>
 		<tr>
 			<td width="250">
-				<div align="center"><h3>카라멜마끼야또</h3></div>
+				<div align="center"><h4>카라멜마끼야또</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>레몬에이드</h3></div>
+				<div align="center"><h4>레몬에이드</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>허니브레드</h3></div>
+				<div align="center"><h4>허니브레드</h4></div>
 			</td>
 		</tr><table width="1250" border="0" align="center" cellpadding="0"
 		cellspacing="0">
@@ -110,13 +110,13 @@
 		</tr>
 		<tr>
 			<td width="250">
-				<div align="center"><h3>녹차라떼</h3></div>
+				<div align="center"><h4>녹차라떼</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>바나나에이드</h3></div>
+				<div align="center"><h4>바나나에이드</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>샌드위치</h3></div>
+				<div align="center"><h4>샌드위치</h4></div>
 			</td>
 		</tr><table width="1250" border="0" align="center" cellpadding="0"
 		cellspacing="0">
@@ -139,13 +139,13 @@
 		</tr>
 		<tr>
 			<td width="250">
-				<div align="center"><h3>카페라떼</h3></div>
+				<div align="center"><h4>카페라떼</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>아이스티</h3></div>
+				<div align="center"><h4>아이스티</h4></div>
 			</td>
 			<td width="250">
-				<div align="center"><h3>쿠키</h3></div>
+				<div align="center"><h4>초코쿠키</h4></div>
 			</td>
 		</tr>
 		

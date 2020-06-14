@@ -4,10 +4,11 @@
 <%@ page import="java.io.PrintWriter"%>
 <%request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id="user" class="user.User" scope="page" />
+<jsp:setProperty name="user" property="userName" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPW" />
-<jsp:setProperty name="user" property="userName" />
 <jsp:setProperty name="user" property="userBirth" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +20,9 @@
 		String userID = null;
 	
 	if (session.getAttribute("userID") != null) {
-		userID = (String) session.getAttribute("userID");
+		userID = (String)session.getAttribute("userID");
 	}
-	if (userID == null) {
+	if (userID != null) {
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('이미 로그인된 사용자입니다!')");
@@ -47,9 +48,9 @@
 			script.println("</script>");
 		} 
 		else {
-			session.setAttribute("userID", user.getUserID());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
+			script.println("alert('회원가입에 성공하셨습니다!')");
 			script.println("location.href='main.jsp'");
 			script.println("</script>");
 		}

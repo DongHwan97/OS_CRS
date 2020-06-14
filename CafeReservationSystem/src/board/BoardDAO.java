@@ -12,10 +12,10 @@ public class BoardDAO {
 	
 	public BoardDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:7908/BOARD";
-			String dbID="root";
-			String dbPW= "1111";
-			Class.forName("com.mysql.jdbc.Driver");
+			String dbURL = "jdbc:mysql://182.209.99.115/info?serverTimezone=Asia/Seoul";
+			String dbID="pjw";
+			String dbPW= "1q2w3e";
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn=DriverManager.getConnection(dbURL,dbID,dbPW);
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -37,7 +37,7 @@ public class BoardDAO {
 	}
 	
 	public int getNext() {//글번호를 매겨주는 메소드
-		String SQL="SELECT boarID FROM BOARD ORDER BY boardID DESC";
+		String SQL="SELECT boardID FROM BOARD ORDER BY boardID DESC";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			rs=pstmt.executeQuery();
@@ -52,7 +52,7 @@ public class BoardDAO {
 	}
 	
 	public int write(String boardTitle, String userID, String boardContent) {
-		String SQL="INSERT INTO BOARD VALUES(?,?,?,?,?)";
+		String SQL="INSERT INTO BOARD VALUES(?,?,?,?,?,?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1,getNext());
@@ -61,6 +61,7 @@ public class BoardDAO {
 			pstmt.setString(4,getDate());
 			pstmt.setString(5,boardContent);
 			pstmt.setInt(6,1);
+			
 			return pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -69,9 +70,12 @@ public class BoardDAO {
 	}
 	
 	public ArrayList<Board> getList(int pageNumber){//게시글10개씩끊어서 페이지반환
-		String SQL="SELECT * FROM BOARD WHERE boardID< ? AND  boardAvailable = 1 ORDER BY board DESC LIMIT 10";
+		String SQL= "SELECT * FROM BOARD WHERE boardID < ? AND boardAvailable = 1 ORDER BY boardID DESC LIMIT 10";
 		ArrayList<Board> list = new ArrayList<Board>();
 		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setInt(1, getNext() - (pageNumber -1) * 10);
+			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				Board board=new Board();
 				board.setBoardID(rs.getInt(1));
@@ -89,10 +93,10 @@ public class BoardDAO {
 	}
 	
 	public boolean nextPage(int pageNumber) {//페이지처리
-		String SQL="SELECT * FROM BOARD WHERE boardID< ? AND  boardAvailable = 1 ORDER BY board DESC LIMIT 10";
+		String SQL="SELECT * FROM BOARD WHERE boardID < ? boardAvailable = 1 ";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, getNext()-(pageNumber-1)*10);
+			pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				return true;
@@ -126,7 +130,7 @@ public class BoardDAO {
 	}
 	
 	public int update(int boardID, String boardTitle, String boardContent) {
-		String SQL="UPDATE BOARD SET boardTitle=?, boardContent=? WHERE boardID=?";
+		String SQL="UPDATE BOARD SET boardTitle = ?, boardContent = ? WHERE boardID = ?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1,boardTitle);
@@ -138,6 +142,7 @@ public class BoardDAO {
 		}
 		return -1;//데이터베이스 오류
 	}
+	
 	public int delete(int boardID) {
 		String SQL="UPDATE BOARD SET boardAvailable=0 WHERE boardID=?";
 		try {

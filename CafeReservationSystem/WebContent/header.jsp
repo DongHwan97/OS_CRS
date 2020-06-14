@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+	<%
 		String userID = null;
 	
 	if (session.getAttribute("userID") != null) {
 		userID = (String) session.getAttribute("userID");
 	}
 	%>
-	
+
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
@@ -42,6 +42,8 @@
 					<ul class="dropdown-menu">
 						<li><a href="login.jsp">로그인</a></li>
 						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="findID.jsp">ID찾기</a></li>
+						<li><a href="findPW.jsp">PW찾기</a></li>
 					</ul></li>
 			</ul>
 			<%

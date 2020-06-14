@@ -14,30 +14,25 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<div class="jumpbotron" style="padding-top: 20px;">
-				<h3 style="text-align: center;">회원가입</h3>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="이름"
-						name="UserName" maxlength="20" width="300">
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="아이디"
-						name="UserID" maxlength="20">
-				</div>
-				<div class="form-group">
-					<form method="post" action="idCheck.jsp">
-					<input type="submit" class="btn btn-primary form-control"
-						value="ID중복확인" style="background-color: #000000; color: #ffffff">
-				</form>
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" placeholder="비밀번호"
-						name="UserPW" maxlength="20">
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="생년월일"
-						name="UserBirth" maxlength="20">
-				</div>
 				<form method="post" action="joinAction.jsp">
+					<h3 style="text-align: center;">회원가입</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="이름"
+							name="userName" maxlength="20" width="300">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="아이디"
+							name="userID" maxlength="20">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="비밀번호"
+							name="userPW" maxlength="20">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="생년월일"
+							name="userBirth" maxlength="20">
+					</div>
+
 					<input type="submit" class="btn btn-primary form-control"
 						value="회원가입" style="background-color: #000000; color: #ffffff">
 				</form>

@@ -36,7 +36,7 @@
 		} 
 		else {
 			BoardDAO boardDAO = new BoardDAO();
-			int result = boardDAO.write(board.getBoardTitle(),userID,board.getBoardContent());
+			int result = boardDAO.write(board.getBoardTitle(), userID, board.getBoardContent());
 			
 			if (result == -1) {
 				PrintWriter script = response.getWriter();

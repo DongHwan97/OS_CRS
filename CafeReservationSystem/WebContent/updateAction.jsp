@@ -25,10 +25,10 @@
 		script.println("</script>");
 	}
 	
-	int boardID=0;
+	int boardID = 0;
 	
 	if(request.getParameter("boardID")!=null){
-		boardID=Integer.parseInt(request.getParameter("boardID"));
+		boardID = Integer.parseInt(request.getParameter("boardID"));
 	}	
 	if(boardID==0){
 		PrintWriter script = response.getWriter();

@@ -2,10 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO"%>
 <%@ page import="java.io.PrintWriter"%>
-<%request.setCharacterEncoding("UTF-8");%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <jsp:useBean id="user" class="user.User" scope="page" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPW" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,7 @@
 <title>다온 카페</title>
 </head>
 <body>
+
 	<%
 		String userID = null;
 	
@@ -30,6 +32,7 @@
 	UserDAO userDAO = new UserDAO();
 	
 	int result = userDAO.login(user.getUserID(), user.getUserPW());	
+	
 	if (result == 1) {
 		session.setAttribute("userID", user.getUserID());
 		PrintWriter script = response.getWriter();
@@ -57,7 +60,6 @@
 		script.println("alert('데이터베이스 오류가 발생했습니다.')");
 		script.println("history.back()");
 		script.println("</script>");
-		;
 	}
 	%>
 </body>

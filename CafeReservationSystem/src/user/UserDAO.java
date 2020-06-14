@@ -13,10 +13,10 @@ public class UserDAO {
 	
 	public UserDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:7908/USER";
-			String dbID="root";
-			String dbPW= "1111";
-			Class.forName("com.mysql.jdbc.Driver");
+			String dbURL = "jdbc:mysql://182.209.99.115/info?serverTimezone=Asia/Seoul";
+			String dbID="pjw";
+			String dbPW= "1q2w3e";
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn=DriverManager.getConnection(dbURL,dbID,dbPW);
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -24,17 +24,17 @@ public class UserDAO {
 	}
 	
 	public int login(String userID, String userPW) {
-		String SQL="SELCECT userPW FROM USER WHERE userID=?";
+		String SQL="SELECT userPW FROM USER WHERE userID = ?";
+		
 		try {
 			pstmt=conn.prepareStatement(SQL);
-			pstmt.setString(1,userID);
+			pstmt.setString(1, userID);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				if(rs.getString(1).equals(userPW))
 					return 1;//로그인성공
 				else
 					return 0;//비밀번호 불일치
-	
 			}
 			return -1;//아이디 db에 미존재
 		}catch(Exception e) {
@@ -47,8 +47,8 @@ public class UserDAO {
 		String SQL="INSERT INTO USER VALUES (?,?,?,?)";
 		try {
 			pstmt=conn.prepareStatement(SQL);
-			pstmt.setString(1,user.getUserName());
-			pstmt.setString(2,user.getUserID());
+			pstmt.setString(1,user.getUserID());
+			pstmt.setString(2,user.getUserName());
 			pstmt.setString(3,user.getUserPW());
 			pstmt.setString(4,user.getUserBirth());
 			return pstmt.executeUpdate();
@@ -57,4 +57,50 @@ public class UserDAO {
 		}
 		return -1;
 	}
+	
+	public String findID(String userName, String userBirth) {
+		String ID=null;
+		String SQL="SELECT userID FROM USER WHERE userName = ? AND userBirth = ?";
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userName);
+			pstmt.setString(2, userBirth);
+
+			rs=pstmt.executeQuery();
+			while(rs.next())
+			{
+				ID=rs.getString("userID"); 
+				return ID;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return "x";//데이터베이스 오류
+	}
+	
+	public String findPW(String userName, String userID, String userBirth) {
+		String PW=null;
+		String SQL="SELECT userPW FROM USER WHERE userName = ? AND userID = ? AND userBirth = ?";
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userName);
+			pstmt.setString(2, userID);
+			pstmt.setString(3, userBirth);
+
+			rs=pstmt.executeQuery();
+			while(rs.next())
+			{
+				PW=rs.getString("userPW"); 
+				return PW;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return "x";//데이터베이스 오류
+	}
+
 }
