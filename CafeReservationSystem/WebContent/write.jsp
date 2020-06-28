@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
@@ -10,8 +9,8 @@
 <link rel="stylesheet" href="css/crs.css">
 <title>다온 카페</title>
 </head>
+<link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
 <body>
-
 <jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
 		<div class="row">
@@ -25,12 +24,10 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="text" class="form-control"
-								placeholder="글 제목" name="boardTitle" maxlength="50"></td>
+							<td><input type="text" class="form-control" placeholder="글 제목" name="boardTitle" maxlength="50"></td>
 						</tr>
 						<tr>
-							<td><textarea class="form-control" placeholder="글 내용"
-									name="boardContent" maxlength="2048" style="height: 350px;"></textarea></td>
+							<td><textarea class="form-control" placeholder="글 내용" name="boardContent" maxlength="2048" style="height: 350px;"></textarea></td>
 						</tr>
 					</tbody>
 				</table>

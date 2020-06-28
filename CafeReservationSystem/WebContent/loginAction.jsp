@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO"%>
 <%@ page import="java.io.PrintWriter"%>
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -14,10 +13,9 @@
 <title>다온 카페</title>
 </head>
 <body>
-
 	<%
 		String userID = null;
-	
+
 	if (session.getAttribute("userID") != null) {
 		userID = (String) session.getAttribute("userID");
 	}	

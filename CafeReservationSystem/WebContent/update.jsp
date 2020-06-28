@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
 <%@ page import="board.Board"%>
 <%@ page import="board.BoardDAO"%>
@@ -12,6 +11,7 @@
 <link rel="stylesheet" href="css/crs.css">
 <title>다온 카페</title>
 </head>
+<link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
 <body>
 	<%
 		String userID = null;
@@ -50,26 +50,22 @@
 	%>
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-			</button>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>
+			<img src="images/logo.png" align="left" width="50px" height="50px">
 			<a class="navbar-brand" href="main.jsp">다온 CAFE</a>
 		</div>
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href=main.jsp>메인</a></li>
-				<li class="active"><a href=board.jsp>게시판</a></li>
+				<li><a href=main.jsp>Main</a></li>
+				<li><a href=introduce.jsp>Cafe Introduction</a></li>
+				<li><a href=menu.jsp>Menu</a></li>
+				<li><a href=board.jsp>Borad</a></li>
+				<li><a href=location.jsp>Location</a></li>
 			</ul>
-
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">회원관리<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="logoutAction.jsp">로그아웃</a></li>
-					</ul></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Management<span class="caret"></span></a>
+					<ul class="dropdown-menu"><li><a href="logoutAction.jsp">Logout</a></li></ul>
+				</li>
 			</ul>
 		</div>
 	</nav>

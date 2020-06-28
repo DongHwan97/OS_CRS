@@ -1,4 +1,4 @@
-package board;
+ package board;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,8 @@ public class BoardDAO {
 	private Connection conn;
 	private ResultSet rs;
 	
-	public BoardDAO() {
+	public BoardDAO()//DB연동
+	{
 		try {
 			String dbURL = "jdbc:mysql://182.209.99.115/info?serverTimezone=Asia/Seoul";
 			String dbID="pjw";
@@ -22,7 +23,8 @@ public class BoardDAO {
 		}
 	}
 	
-	public String getDate() {//날짜가져오는 메소드
+	public String getDate()//날짜가져오는 메소드
+	{
 		String SQL="SELECT NOW()";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -36,7 +38,8 @@ public class BoardDAO {
 		return "";//데이터베이스 오류
 	}
 	
-	public int getNext() {//글번호를 매겨주는 메소드
+	public int getNext()//글번호를 매겨주는 메소드
+	{
 		String SQL="SELECT boardID FROM BOARD ORDER BY boardID DESC";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -51,7 +54,8 @@ public class BoardDAO {
 		return -1;//데이터베이스 오류
 	}
 	
-	public int write(String boardTitle, String userID, String boardContent) {
+	public int write(String boardTitle, String userID, String boardContent)//글쓰기
+	{
 		String SQL="INSERT INTO BOARD VALUES(?,?,?,?,?,?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -69,7 +73,8 @@ public class BoardDAO {
 		return -1;//데이터베이스 오류
 	}
 	
-	public ArrayList<Board> getList(int pageNumber){//게시글10개씩끊어서 페이지반환
+	public ArrayList<Board> getList(int pageNumber)//게시글10개씩끊어서 페이지반환
+	{
 		String SQL= "SELECT * FROM BOARD WHERE boardID < ? AND boardAvailable = 1 ORDER BY boardID DESC LIMIT 10";
 		ArrayList<Board> list = new ArrayList<Board>();
 		try {
@@ -92,8 +97,9 @@ public class BoardDAO {
 		return list;
 	}
 	
-	public boolean nextPage(int pageNumber) {//페이지처리
-		String SQL="SELECT * FROM BOARD WHERE boardID < ? boardAvailable = 1 ";
+	public boolean nextPage(int pageNumber)//페이지처리
+	{
+		String SQL="SELECT * FROM BOARD WHERE boardID < ? AND boardAvailable = 1 ";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
@@ -107,7 +113,8 @@ public class BoardDAO {
 		return false;
 	}
 	
-	public Board getBoard(int boardID) {//글보는 기능 구현
+	public Board getBoard(int boardID)//글보는 기능
+	{
 		String SQL="SELECT * FROM BOARD WHERE boardID = ?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -129,7 +136,8 @@ public class BoardDAO {
 		return null;
 	}
 	
-	public int update(int boardID, String boardTitle, String boardContent) {
+	public int update(int boardID, String boardTitle, String boardContent)//게시글수정
+	{
 		String SQL="UPDATE BOARD SET boardTitle = ?, boardContent = ? WHERE boardID = ?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -143,7 +151,8 @@ public class BoardDAO {
 		return -1;//데이터베이스 오류
 	}
 	
-	public int delete(int boardID) {
+	public int delete(int boardID)//게시글삭제
+	{
 		String SQL="UPDATE BOARD SET boardAvailable=0 WHERE boardID=?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);

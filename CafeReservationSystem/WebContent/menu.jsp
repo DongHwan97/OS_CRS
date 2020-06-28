@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" , initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/crs.css">
 <title>다온 카페</title>
 </head>
 <link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
@@ -18,20 +17,16 @@
 				style="text-align: center; border: 1px solid #dddddd;">
 				<thead>
 					<tr>
-						<th
-							style="background-color: #000000; color: #ffffff; text-align: center;">커피</th>
-						<th
-							style="background-color: #000000; color: #ffffff; text-align: center;">음료</th>
-						<th
-							style="background-color: #000000; color: #ffffff; text-align: center;">디저트</th>
+						<th style="background-color: #000000; color: #ffffff; text-align: center;">커피</th>
+						<th style="background-color: #000000; color: #ffffff; text-align: center;">음료</th>
+						<th style="background-color: #000000; color: #ffffff; text-align: center;">디저트</th>
 					</tr>
 				</thead>
 				<tbody>
 			</table>
 		</div>
 	</div>
-	<table width="1250" border="0" align="center" cellpadding="0"
-		cellspacing="0">
+	<table width="1250" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="250">
 				<div align="center">
@@ -60,8 +55,7 @@
 				<div align="center"><h4>케이크</h4></div>
 			</td>
 		</tr>
-		<table width="1250" border="0" align="center" cellpadding="0"
-		cellspacing="0">
+		<table width="1250" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="250">
 				<div align="center">
@@ -89,8 +83,7 @@
 			<td width="250">
 				<div align="center"><h4>허니브레드</h4></div>
 			</td>
-		</tr><table width="1250" border="0" align="center" cellpadding="0"
-		cellspacing="0">
+		</tr><table width="1250" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="250">
 				<div align="center">
@@ -118,8 +111,7 @@
 			<td width="250">
 				<div align="center"><h4>샌드위치</h4></div>
 			</td>
-		</tr><table width="1250" border="0" align="center" cellpadding="0"
-		cellspacing="0">
+		</tr><table width="1250" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="250">
 				<div align="center">
@@ -150,8 +142,7 @@
 		</tr>
 		
 	</table>
-	<table width="1250" border="0" align="center" cellpadding="0"
-		cellspacing="0">
+	<table width="1250" border="0" align="center" cellpadding="0" cellspacing="0">
 		<tr>
 			<td width="250">
 				<div align="center"></div>

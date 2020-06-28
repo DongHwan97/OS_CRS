@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
 <!DOCTYPE html>
 <html>
@@ -9,6 +8,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>다온 카페</title>
 </head>
+<link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
@@ -18,15 +18,12 @@
 				<form method="post" action="loginAction.jsp">
 					<h3 style="text-align: center;">로그인</h3>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="아이디"
-							name="userID" maxlength="20">
+						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" placeholder="비밀번호"
-							name="userPW" maxlength="20">
+						<input type="password" class="form-control" placeholder="비밀번호" name="userPW" maxlength="20">
 					</div>
-					<input type="submit" class="btn btn-primary form-control" style="background-color:#000000; color:#ffffff";
-						value="로그인">
+					<input type="submit" class="btn btn-primary form-control" style="background-color:#000000; color:#ffffff"; value="로그인">
 				</form>
 			</div>
 		</div>

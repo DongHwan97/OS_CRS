@@ -11,7 +11,8 @@ public class UserDAO {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
-	public UserDAO() {
+	public UserDAO()//DB연동
+	{
 		try {
 			String dbURL = "jdbc:mysql://182.209.99.115/info?serverTimezone=Asia/Seoul";
 			String dbID="pjw";
@@ -23,9 +24,9 @@ public class UserDAO {
 		}
 	}
 	
-	public int login(String userID, String userPW) {
+	public int login(String userID, String userPW)//로그인
+	{
 		String SQL="SELECT userPW FROM USER WHERE userID = ?";
-		
 		try {
 			pstmt=conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
@@ -43,7 +44,8 @@ public class UserDAO {
 		return -2;
 	}
 	
-	public int join(User user) {
+	public int join(User user)//회원가입
+	{
 		String SQL="INSERT INTO USER VALUES (?,?,?,?)";
 		try {
 			pstmt=conn.prepareStatement(SQL);
@@ -58,49 +60,44 @@ public class UserDAO {
 		return -1;
 	}
 	
-	public String findID(String userName, String userBirth) {
+	public String findID(String userName, String userBirth)//아이디찾기
+	{
 		String ID=null;
 		String SQL="SELECT userID FROM USER WHERE userName = ? AND userBirth = ?";
-		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userName);
 			pstmt.setString(2, userBirth);
-
 			rs=pstmt.executeQuery();
 			while(rs.next())
 			{
 				ID=rs.getString("userID"); 
 				return ID;
 			}
-			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		return "x";//데이터베이스 오류
 	}
 	
-	public String findPW(String userName, String userID, String userBirth) {
+	public String findPW(String userName, String userID, String userBirth)//비밀번호찾기
+	{
 		String PW=null;
 		String SQL="SELECT userPW FROM USER WHERE userName = ? AND userID = ? AND userBirth = ?";
-		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userName);
 			pstmt.setString(2, userID);
 			pstmt.setString(3, userBirth);
-
 			rs=pstmt.executeQuery();
 			while(rs.next())
 			{
 				PW=rs.getString("userPW"); 
 				return PW;
-			}
-			
+			}	
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		return "x";//데이터베이스 오류
 	}
-
 }

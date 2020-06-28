@@ -2,10 +2,10 @@ package user;
 
 public class User {
 
-	private String userID;
-	private String userPW;
-	private String userName;
-	private String userBirth;
+	private String userID;//아이디
+	private String userPW;//패스워드
+	private String userName;//이름
+	private String userBirth;//생년월일
 
 	public String getUserID() {
 		return userID;

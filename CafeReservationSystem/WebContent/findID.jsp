@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,30 +7,26 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>다온 카페</title>
 </head>
+<link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<div class="jumpbotron" style="padding-top: 20px;">
-				<h3 style="text-align: center;">ID찾기</h3>
+				<h3 style="text-align: center;">아이디찾기</h3>
 				<form method="post" action="findIDAction.jsp">
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="이름"
-						name="userName" maxlength="20" width="300">
+					<input type="text" class="form-control" placeholder="이름" name="userName" maxlength="20" width="300">
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="생년월일"
-						name="userBirth" maxlength="20">
+					<input type="text" class="form-control" placeholder="생년월일" name="userBirth" maxlength="20">
 				</div>
-				
-					<input type="submit" class="btn btn-primary form-control"
-						value="ID찾기" style="background-color: #000000; color: #ffffff">
+					<input type="submit" class="btn btn-primary form-control" value="아이디찾기" style="background-color: #000000; color: #ffffff">
 				</form>
 			</div>
 		</div>
 	</div>
-
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<jsp:include page="footer.jsp"></jsp:include>

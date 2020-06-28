@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO"%>
 <%@ page import="user.User"%>
 <%@ page import="java.io.PrintWriter"%>
@@ -16,8 +15,6 @@
 </head>
 <body>
 	<%
-		
-
 		UserDAO userDAO = new UserDAO();
 		String result = userDAO.findPW(user.getUserName(),user.getUserID(),user.getUserBirth());
 		
@@ -35,7 +32,6 @@
 			script.println("location.href='main.jsp'");
 			script.println("</script>");
 		}
-
 	%>
 </body>
 </html>
