@@ -12,15 +12,7 @@ public class BoardDAO {
 	
 	public BoardDAO()//DB연동
 	{
-		try {
-			String dbURL = "jdbc:mysql://182.209.99.115/info?serverTimezone=Asia/Seoul";
-			String dbID="pjw";
-			String dbPW= "ekdhsqlf403gh";
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection(dbURL,dbID,dbPW);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		
 	}
 	
 	public String getDate()//날짜가져오는 메소드
