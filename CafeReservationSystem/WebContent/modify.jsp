@@ -56,26 +56,26 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href=main.jsp>Main</a></li>
-				<li><a href=introduce.jsp>Cafe Introduction</a></li>
-				<li><a href=menu.jsp>Menu</a></li>
-				<li><a href=board.jsp>Borad</a></li>
-				<li><a href=location.jsp>Location</a></li>
+				<li><a href=main.jsp>메인</a></li>
+				<li><a href=introduce.jsp>카페소개</a></li>
+				<li><a href=menu.jsp>메뉴</a></li>
+				<li><a href=board.jsp>게시판</a></li>
+				<li><a href=location.jsp>찾아오는 길</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Management<span class="caret"></span></a>
-					<ul class="dropdown-menu"><li><a href="logoutAction.jsp">Logout</a></li></ul>
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">접속관리<span class="caret"></span></a>
+					<ul class="dropdown-menu"><li><a href="logoutAction.jsp">로그아웃</a></li></ul>
 				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container">
 		<div class="row">
-			<form method="post" action="updateAction.jsp?boardID=<%= boardID %>">
+			<form method="post" action="modifyAction.jsp?boardID=<%= boardID %>">
 				<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 					<thead>
 						<tr>
-							<th colspan="2" style="background-color: #eeeeee; text-align: center;">수정하기</th>
+							<th colspan="2" style="background-color: #eeeeee; text-align: center;">수정</th>
 						</tr>
 					</thead>
 					<tbody>

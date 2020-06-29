@@ -33,7 +33,7 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">접속하기<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="signUp.jsp">회원가입</a></li>
 						<li><a href="findID.jsp">아이디찾기</a></li>
 						<li><a href="findPW.jsp">비밀번호찾기</a></li>
 					</ul></li>

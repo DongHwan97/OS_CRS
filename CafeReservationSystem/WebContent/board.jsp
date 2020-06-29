@@ -40,7 +40,7 @@
 					%>
 					<tr>
 						<td><%=list.get(i).getBoardID()%></td>
-						<td><a href="view.jsp?boardID=<%=list.get(i).getBoardID()%>"><%=list.get(i).getBoardTitle()%></a></td>
+						<td><a href="check.jsp?boardID=<%=list.get(i).getBoardID()%>"><%=list.get(i).getBoardTitle()%></a></td>
 						<td><%=list.get(i).getUserID()%></td>
 						<td><%=list.get(i).getBoardDate().substring(0, 11) + list.get(i).getBoardDate().substring(11, 13) + "시"+ list.get(i).getBoardDate().substring(14, 16) + "분"%></td>
 					</tr>
@@ -52,12 +52,12 @@
 			<%
 				if (pageNumber != 1) {
 			%>
-			<a href="board.jsp?pageNumber=<%=pageNumber - 1%>" class="btn btn-success btn-arrow-left">Prev</a>
+			<a href="board.jsp?pageNumber=<%=pageNumber - 1%>" class="btn btn-success btn-arrow-left" style="background-color: #000000; color: #ffffff;">Prev</a>
 			<%
 				}
 			if (boardDAO.nextPage(pageNumber+1)) {
 			%>
-			<a href="board.jsp?pageNumber=<%=pageNumber + 1%>" class="btn btn-success btn-arrow-left">Next</a>
+			<a href="board.jsp?pageNumber=<%=pageNumber + 1%>" class="btn btn-success btn-arrow-left" style="background-color: #000000; color: #ffffff;">Next</a>
 			<%
 				}
 			%>

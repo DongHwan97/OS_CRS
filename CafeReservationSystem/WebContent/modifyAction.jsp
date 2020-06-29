@@ -41,7 +41,7 @@
 	if(!userID.equals(board.getUserID())){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('게시글에 권한이 없습니다.')");
+		script.println("alert('권한이 없는 게시글입니다!')");
 		script.println("location.href='board.jsp'");
 		script.println("</script>");
 	}
@@ -50,7 +50,7 @@
 				request.getParameter("boardTitle").equals("") || request.getParameter("boardContent").equals("")) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('입력이 안 된 사항이 있습니다.')");
+			script.println("alert('입력이 안된 사항이 있습니다!')");
 			script.println("history.back()");
 			script.println("</script>");
 		} 

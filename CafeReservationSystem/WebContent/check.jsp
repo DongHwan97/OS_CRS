@@ -41,12 +41,12 @@
 				style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
-						<th colspan="3" style="background-color: #eeeeee; text-align: center;">글보기</th>
+						<th colspan="3" style="background-color: #eeeeee; text-align: center;">게시글</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td style="width: 20%;">글제목</td>
+						<td style="width: 20%;">제목</td>
 						<td colspan="2"><%=board.getBoardTitle().replaceAll("", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>")%></td>
 					</tr>
 					<tr>
@@ -54,11 +54,11 @@
 						<td colspan="2"><%=board.getUserID()%></td>
 					</tr>
 					<tr>
-						<td>작성일자</td>
+						<td>작성일</td>
 						<td colspan="2"><%=board.getBoardDate().substring(0, 11) + board.getBoardDate().substring(11, 13) + "시"+ board.getBoardDate().substring(14, 16) + "분"%></td>
 					</tr>
 					<tr>
-						<td>내용</td>
+						<td></td>
 						<td colspan="2" style="min-height: 200px; text-align: left;"><%=board.getBoardContent().replaceAll("", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>")%></td>
 					</tr>
 				</tbody>
@@ -67,7 +67,7 @@
 			<%
 				if (userID != null & userID.equals(board.getUserID())) {
 			%>
-			<a href="update.jsp?boardID=<%=boardID%>" class="btn btn-primary" style="background-color: #000000; color: #ffffff">수정</a>
+			<a href="modify.jsp?boardID=<%=boardID%>" class="btn btn-primary" style="background-color: #000000; color: #ffffff">수정</a>
 			<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?boardID=<%=boardID%>"class="btn btn-primary" style="background-color: #000000; color: #ffffff">삭제</a>
 			<%
 				}
