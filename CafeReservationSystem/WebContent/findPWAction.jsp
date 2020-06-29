@@ -21,7 +21,7 @@
 		if (result == "x") {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('아이디가 존재하지 않거나 데이터베이스 오류입니다.')");
+			script.println("alert('아이디 혹은 비밀번호가 존재하지 않습니다.')");
 			script.println("history.back()");
 			script.println("</script>");
 		} 

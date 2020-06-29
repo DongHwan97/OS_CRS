@@ -7,7 +7,7 @@
 </head>
 <body>
 	<%session.invalidate();%>
-	<script>alert('로그아웃되셨습니다!!!')</script>
+	<script>alert('로그아웃되셨습니다.')</script>
 	<script>location.href = "main.jsp";</script>
 </body>
 </html>
