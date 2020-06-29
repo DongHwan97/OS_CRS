@@ -14,7 +14,7 @@
 		<p style="text-align: center">
 			<img src="images/guide.PNG" width="800px" height="600">
 		</p>
-		<h3 style="text-align: center">오시는 길</h3>
+		<h3 style="text-align: center">찾아오는 길</h3>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/bootstrap.js"></script>
