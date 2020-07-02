@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" , initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
+
 <title>다온 카페</title>
 </head>
 <link rel="shortcut icon" type="imgge.x-icon" href="images/favicon.png">

@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" , initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/crs.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
 		<p align="center">선문대학교 컴퓨터공학부 3학년 다온People에서</p>
 		<p align="center">오픈소스 프로젝트를 위해 만든 가상의 카페입니다.</p>
 	</div>
-	<div class="container" style="background-color: #000000; color: #ffffff;">
+	<div class="container"; style="background-color: #000000; color: #ffffff;">
 		<br>
 		<div class="row">
 			<div class="col-sm-3" style="text-align: center">
@@ -33,5 +34,6 @@
 			</div>
 		</div>
 	</div>
+	</body>
 </body>
 </html>
